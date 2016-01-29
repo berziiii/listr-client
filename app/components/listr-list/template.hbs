@@ -1,11 +1,14 @@
 <header>
   <h2>{{ list.title }}</h2>
 </header>
-
+<form {{action "submit" on="submit"}}>
+  {{input type="text" valueBinding="text"}} <button type="submit">Add Todo</button>
+</form>
 <ul>
 {{#each list.items as |item| }}
   <li>
     {{ listr-list/listr-item item=item }}
   </li>
+  <!-- {{input type="hidden" valueBinding="listId" value="list.id"}} -->
 {{/each}}
 </ul>
