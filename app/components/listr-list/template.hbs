@@ -1,0 +1,11 @@
+<header>
+  <h2>{{ list.title }}</h2>
+</header>
+
+<ul>
+{{#each list.items as |item| }}
+  <li>
+    {{ listr-list/listr-item item=item }}
+  </li>
+{{/each}}
+</ul>
